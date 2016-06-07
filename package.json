@@ -4,7 +4,8 @@
   "description": "node module boilerplate",
   "license": "MIT",
   "scripts": {
-    "prepublish": "npm i"
+    "prepublish": "(which gulp || npm i -g gulp) && gulp test",
+    "start": "gulp"
   },
   "files": [
     "dist"
