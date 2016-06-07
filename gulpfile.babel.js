@@ -3,6 +3,7 @@ import child_process from 'child_process'
 
 import gulp from 'gulp'
 import sequence from 'gulp-sequence'
+import del from 'del'
 
 import rollup from 'gulp-rollup'
 import sourcemaps from 'gulp-sourcemaps'
@@ -22,6 +23,10 @@ gulp.task('lint', () =>
 	gulp.src(['src/**/*.js'])
 		.pipe(lint())
 )
+
+/** Clean */
+gulp.task('clean', () => del(['build', 'dist', 'doc']))
+	
 
 /** Test */
 gulp.task('test', () =>
@@ -95,3 +100,7 @@ gulp.task('publish', (cb) =>
 
 /** Dist */
 gulp.task('dist', sequence('lint', 'test', 'clean', 'build', 'copy'))
+
+
+/** Default */
+gulp.task('default', ['dist'])
