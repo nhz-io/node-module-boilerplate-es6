@@ -1,0 +1,17 @@
+{
+  "source": "./src",
+  "destination": "./esdoc",
+  "includes": ["\\.js$"],
+  "excludes": ["tmp/"],
+  "unexportIdentifier": false,
+  "undocumentIdentifier": true,
+  "builtinExternal": true,
+  "index": "./readme.md",
+  "package": "./package.json",
+  "coverage": true,
+  "includeSource": true,
+  "lint": true,
+  "plugins": [
+    {"name": "esdoc-es7-plugin"}
+  ]
+}

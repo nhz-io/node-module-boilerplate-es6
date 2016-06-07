@@ -1,0 +1,44 @@
+{
+  "name": "node-module-boilerplate-es6",
+  "version": "0.0.0",
+  "description": "node module boilerplate",
+  "license": "MIT",
+  "scripts": {
+    "prepublish": "npm i"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "xo": {
+    "esnext": true,
+    "ignores": [
+      "dist/**",
+      "doc/**",
+      "test/**",
+      "**/tmp/**"
+    ],
+    "rules": {
+      "semi": [
+        1,
+        "never"
+      ],
+      "no-fallthrough": 1,
+      "babel/new-cap": 1,
+      "comma-dangle": [
+        1,
+        "always-multiline"
+      ]
+    }
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ],
+    "files": [
+      "test/**/*.js",
+      "!**/tmp"
+    ],
+    "babel": "inherit"
+  }
+}

@@ -1,0 +1,15 @@
+node_modules
+examples
+assets
+doc
+esdoc
+build
+src
+test
+.babelrc
+.editorconfig
+.gitattributes
+.gitignore
+.npmignore
+.esdoc
+/binding.gyp
